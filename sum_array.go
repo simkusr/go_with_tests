@@ -2,8 +2,8 @@ package sumarray
 
 func SumArray(data []int) int {
 	sum := 0
-	for i := 0; i < len(data); i++ {
-		sum += data[i]
+	for _, number := range data {
+		sum += number
 	}
 	return sum
 }
