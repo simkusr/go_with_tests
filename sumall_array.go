@@ -1,13 +1,18 @@
 package sumAll
 
-func SumAll(data ...[]int) []int {
-	var result []int
-	for i := 0; i < len(data); i++ {
-		var sum int = 0
-		for _, numb := range data[i] {
-			sum += numb
-		}
-		result = append(result, sum)
+func SumArray(data []int) int {
+	sum := 0
+	for _, number := range data {
+		sum += number
 	}
-	return result
+	return sum
+}
+
+func SumAll(data ...[]int) []int {
+	lenghtOfNumbers := len(data)
+	sums := make([]int, lenghtOfNumbers)
+	for i, numbers := range data {
+		sums[i] = SumArray(numbers)
+	}
+	return sums
 }
