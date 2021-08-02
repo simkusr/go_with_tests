@@ -53,3 +53,17 @@ func TestSumAll(t *testing.T) {
 		}
 	})
 }
+
+// SumAllTails, where it will calculate the totals of the "tails" of each slice.
+// The tail of a collection is all items in the collection except the first one
+// (the "head").
+
+func TestSumAllTails(t *testing.T) {
+	t.Run("Testing SumAllTails Nr. 1", func(t *testing.T) {
+		got := SumAllTails([]int{1, 2}, []int{1, 9})
+		expected := []int{2, 9}
+		if !reflect.DeepEqual(expected, got) {
+			t.Errorf("Expected: %v, but got: %v", expected, got)
+		}
+	})
+}
