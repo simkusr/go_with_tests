@@ -11,13 +11,4 @@ func TestSumArray(t *testing.T) {
 			t.Errorf("Expected %d but got %d while sent %v", expected, got, data)
 		}
 	})
-
-	t.Run("Harder test", func(t *testing.T) {
-		data := []int{1, 2, 3, 4, 5, 6}
-		got := SumArray(data)
-		expected := 21
-		if got != expected {
-			t.Errorf("Expected %d but got %d while sent %v", expected, got, data)
-		}
-	})
 }
