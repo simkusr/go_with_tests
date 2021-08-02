@@ -9,10 +9,9 @@ func SumArray(data []int) int {
 }
 
 func SumAll(data ...[]int) []int {
-	lenghtOfNumbers := len(data)
-	sums := make([]int, lenghtOfNumbers)
-	for i, numbers := range data {
-		sums[i] = SumArray(numbers)
+	var sums []int
+	for _, numbers := range data {
+		sums = append(sums, SumArray(numbers))
 	}
 	return sums
 }
